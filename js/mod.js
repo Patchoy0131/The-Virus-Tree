@@ -61,9 +61,9 @@ function isEndgame() {
 // Upgrades.
 upgrades: {
 
-	11: {
-		title: "Hire a friend.",
-		description: "Double your point gain.",
+	11, {
+		title: "Use a riskier website.",
+		description: "Double your warning gain.",
 		cost: new Decimal(1),
 	},
 
