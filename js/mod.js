@@ -40,7 +40,7 @@ function canGenPoints(){
 function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
-
+	if (hasUpgrade('h', 11)) gain = gain.times(2)
 	let gain = new Decimal(1)
 	return gain
 }
@@ -58,7 +58,16 @@ function isEndgame() {
 	return player.points.gte(new Decimal("e280000000"))
 }
 
+// Upgrades.
+upgrades: {
 
+	11: {
+		title: "Hire a friend.",
+		description: "Double your point gain.",
+		cost: new Decimal(1),
+	},
+
+}
 
 // Less important things beyond this point!
 
